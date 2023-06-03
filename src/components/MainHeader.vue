@@ -1,7 +1,7 @@
 <template>
     <header>
-        <button>game 1</button>
-        <button>game 2</button>
+        <button>basic</button>
+        <button>advanced</button>
     </header>
 </template>
 
@@ -18,5 +18,4 @@ header {
     align-items: center;
     justify-content: center;
 }
-
 </style>
