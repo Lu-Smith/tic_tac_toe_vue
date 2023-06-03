@@ -19,24 +19,17 @@ export default {
     };
   },
   methods: {
-    handleMove(index) {
-      if (this.player === 'Player 1') {
-        this.move = 'X'
-      } else {
-        this.move = 'O'
-      }
-      if (!this.cells[index]) {
-            this.cells[index] = this.move;
-          }
-      console.log(this.move)
-    },
     handlePlayer(index) {
-      if (this.player === 'Player 1') {
-        this.player = 'Player 2'
-      } else {
-        this.player = 'Player 1'
+      if (!this.cells[index]) {
+        if (this.player === 'Player 1') {
+          this.player = 'Player 2'
+          this.move = 'O'
+        } else {
+          this.player = 'Player 1'
+          this.move = 'X'
+        }
+        this.cells[index] = this.move;
       }
-      this.handleMove(index)
     }
   }
 }
