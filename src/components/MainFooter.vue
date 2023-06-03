@@ -4,5 +4,43 @@
   </template>
   
   <style>
- 
+  footer {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      text-align: center;
+      padding: 20px;
+      color: rgb(250, 250, 250);
+  
+  }
+  
+  footer a {
+    color: rgb(215, 233, 241);
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s;
+  }
+  
+  footer a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: rgb(121, 136, 185);
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  footer a:hover {
+    color: rgb(121, 136, 185);
+  }
+  
+  footer a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
   </style>
