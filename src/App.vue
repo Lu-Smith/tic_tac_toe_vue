@@ -1,4 +1,5 @@
 <template>
+  <MainHeader />
   <h1>Hello World</h1>
   <MainFooter />
 </template>
@@ -6,11 +7,13 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import MainFooter from './components/MainFooter.vue';
+import MainHeader from './components/MainHeader.vue';
 
 export default defineComponent({
   name: 'App',
   components: {
     MainFooter,
+    MainHeader,
   }
 });
 </script>
