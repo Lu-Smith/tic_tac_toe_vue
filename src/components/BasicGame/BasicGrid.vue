@@ -1,6 +1,6 @@
 <template>
   <div class="grid">
-    <div class="cell" v-for="cell in cells" :key="cell"  @click="handlePlayer">
+    <div class="cell" v-for="(cell, index) in cells" :key="index"  @click="handlePlayer(index)">
     {{ cell }}
     </div>
   </div>
@@ -8,12 +8,7 @@
 
 <script>
   export default {
-      props: ['handlePlayer', 'move'],
-      data() {
-        return {
-          cells: ['','','','','','','','','']
-        };
-      }
+      props: ['handlePlayer', 'move', 'cells'],
   }
 </script>
 
