@@ -1,11 +1,15 @@
 <template>
   <MainHeader />
   <h1>Tic Tac Toe</h1>
+  <BasicGame />
+  <AdvancedGame />
   <MainFooter />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import AdvancedGame from './components/AdvancedGame.vue';
+import BasicGame from './components/BasicGame.vue';
 import MainFooter from './components/MainFooter.vue';
 import MainHeader from './components/MainHeader.vue';
 
@@ -14,6 +18,8 @@ export default defineComponent({
   components: {
     MainFooter,
     MainHeader,
+    BasicGame,
+    AdvancedGame,
   }
 });
 </script>
