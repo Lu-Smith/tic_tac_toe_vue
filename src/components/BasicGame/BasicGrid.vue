@@ -8,7 +8,7 @@
 
 <script>
   export default {
-      props: ['handlePlayer'],
+      props: ['handlePlayer', 'move'],
       data() {
         return {
           cells: ['','','','','','','','','']
@@ -28,7 +28,6 @@
   margin: 30px auto;
   width: 290px;
   height: 290px;
-
 }
 
 .cell {

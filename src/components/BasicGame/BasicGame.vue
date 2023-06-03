@@ -1,7 +1,7 @@
 <template>
   <h2>Basic game</h2>
   <h3>{{ player }}</h3>
-  <BasicGrid :handlePlayer="handlePlayer"/>
+  <BasicGrid :handlePlayer="handlePlayer" :move="move"/>
 </template>
 
 <script>
