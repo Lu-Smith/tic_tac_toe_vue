@@ -1,8 +1,8 @@
 <template>
-  <MainHeader />
+  <MainHeader :handleSwitchGame="handleSwitchGame"/>
   <h1>Tic Tac Toe</h1>
-  <BasicGame />
-  <AdvancedGame />
+  <BasicGame v-if="gameLevel"/>
+  <AdvancedGame v-if="!gameLevel" />
   <MainFooter />
 </template>
 
@@ -20,6 +20,16 @@ export default defineComponent({
     MainHeader,
     BasicGame,
     AdvancedGame,
+  },
+  data() {
+    return {
+      gameLevel: true
+    }
+  },
+  methods: {
+    handleSwitchGame() {
+      this.gameLevel = !this.gameLevel
+    }
   }
 });
 </script>

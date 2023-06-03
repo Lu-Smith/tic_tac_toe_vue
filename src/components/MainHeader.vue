@@ -1,12 +1,13 @@
 <template>
     <header>
-        <button>basic</button>
-        <button>advanced</button>
+        <button @click="handleSwitchGame">basic</button>
+        <button @click="handleSwitchGame">advanced</button>
     </header>
 </template>
 
 <script>
 export default {
+    props: ['handleSwitchGame']
 
 }
 </script>
