@@ -1,20 +1,20 @@
 <template>
   <div class="grid">
-    <div class="cell" v-for="cell in cells" :key="cell">
-        {{ cell }}
+    <div class="cell" v-for="cell in cells" :key="cell"  @click="handleMove">
+    {{ cell }}
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      cells: [1, 2, 3, 4, 5, 6, 7, 8, 9]
-    };
+    props: ['handleMove'],
+    data() {
+      return {
+        cells: ['','','','','','','','','']
+      };
+    }
   }
-
-}
 </script>
 
 <style>
