@@ -1,19 +1,19 @@
 <template>
   <div class="grid">
-    <div class="cell" v-for="cell in cells" :key="cell"  @click="handleMove">
+    <div class="cell" v-for="cell in cells" :key="cell"  @click="handlePlayer">
     {{ cell }}
     </div>
   </div>
 </template>
 
 <script>
-export default {
-    props: ['handleMove'],
-    data() {
-      return {
-        cells: ['','','','','','','','','']
-      };
-    }
+  export default {
+      props: ['handlePlayer'],
+      data() {
+        return {
+          cells: ['','','','','','','','','']
+        };
+      }
   }
 </script>
 
