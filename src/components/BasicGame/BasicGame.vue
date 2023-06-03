@@ -13,15 +13,15 @@ export default {
   },
   data() {
     return {
-      player: 'player 1'
+      player: 'Player 1'
     };
   },
   methods: {
     handleMove() {
-      if (this.player === 'player 1') {
-        this.player = 'player 2'
+      if (this.player === 'Player 1') {
+        this.player = 'Player 2'
       } else {
-        this.player = 'player 1'
+        this.player = 'Player 1'
       }
     }
   }
