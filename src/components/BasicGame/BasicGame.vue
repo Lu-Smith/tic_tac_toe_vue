@@ -1,11 +1,9 @@
 <template>
   <h2>Basic game</h2>
-  <h3>{{ player }}</h3>
+  <h3 v-if="!gameOver">{{ player }}</h3>
+  <h3 v-else>{{ winner }} won!</h3>
   <BasicGrid :handlePlayer="handlePlayer" :move="move" :cells="cells"/>
-  <div v-if="gameOver">
-    <h4 >Game Over</h4>
-    <h4>{{ winner }} won 🥳</h4>
-  </div>
+  <h4 v-if="gameOver">Game Over</h4>
 </template>
 
 <script>

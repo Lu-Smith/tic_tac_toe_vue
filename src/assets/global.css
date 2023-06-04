@@ -31,6 +31,8 @@ h1, h3 {
     letter-spacing: 1px;
 }
 
-h3 {
-    width: 110px;
+h4 {
+    font-size: 30px;
+    line-height: 35px;
+    color: red;
 }
