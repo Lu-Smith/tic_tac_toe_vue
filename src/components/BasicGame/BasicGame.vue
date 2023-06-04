@@ -40,7 +40,7 @@ export default {
             this.cells[3] === 'O' && this.cells[4] === 'O' && this.cells[5] === 'O' ||
             this.cells[6] === 'O' && this.cells[7] === 'O' && this.cells[8] === 'O' ||
             this.cells[0] === 'O' && this.cells[3] === 'O' && this.cells[6] === 'O' || 
-            this.cells[1] === 'O' && this.cells[4] === 'O' && this.cells[8] === 'O' ||
+            this.cells[1] === 'O' && this.cells[4] === 'O' && this.cells[7] === 'O' ||
             this.cells[2] === 'O' && this.cells[5] === 'O' && this.cells[8] === 'O' ||
             this.cells[0] === 'O' && this.cells[4] === 'O' && this.cells[8] === 'O' ||
             this.cells[2] === 'O' && this.cells[4] === 'O' && this.cells[6] === 'O' 
@@ -48,6 +48,18 @@ export default {
           this.gameOver = true
           this.player = 'Player 1'
         }   
+        if (this.cells[0] === 'X' && this.cells[1] === 'X' && this.cells[2] === 'X' || 
+            this.cells[3] === 'X' && this.cells[4] === 'X' && this.cells[5] === 'X' ||
+            this.cells[6] === 'X' && this.cells[7] === 'X' && this.cells[8] === 'X' ||
+            this.cells[0] === 'X' && this.cells[3] === 'X' && this.cells[6] === 'X' || 
+            this.cells[1] === 'X' && this.cells[4] === 'X' && this.cells[7] === 'X' ||
+            this.cells[2] === 'X' && this.cells[5] === 'X' && this.cells[8] === 'X' ||
+            this.cells[0] === 'X' && this.cells[4] === 'X' && this.cells[8] === 'X' ||
+            this.cells[2] === 'X' && this.cells[4] === 'X' && this.cells[6] === 'X' 
+        ) {
+          this.gameOver = true
+          this.player = 'Player 2'
+        } 
       }
     }
   }
