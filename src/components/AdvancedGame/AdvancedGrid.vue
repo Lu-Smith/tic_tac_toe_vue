@@ -12,17 +12,17 @@
   }
 </script>
 
-<style>
+<style scoped>
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   gap: 10px;
   justify-items: center;
   align-items: center;
-  margin: 30px auto;
-  width: 290px;
-  height: 290px;
+  margin: 10px auto;
+  width: 390px;
+  height: 390px;
 }
 
 .cell {

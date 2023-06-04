@@ -17,7 +17,7 @@ export default {
     return {
       player: 'Player 1',
       move: '',
-      cells: ['','','','','','','','',''],
+      cells: ['','','','','','','','','','','','','','','',''],
       gameOver: false,
       winner: ''
     };
