@@ -35,5 +35,12 @@
   border-radius: 10px;
   border: 3px solid rgb(243, 184, 96);
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+  font-size: 40px;
+  cursor: pointer;
+  transition: 200ms all ease-in-out;
+}
+
+.cell:hover {
+  background: radial-gradient(circle at 10% 20%, rgba(253, 239, 132, 0.7) 0%, rgba(247, 198, 169, 0.7) 54.2%, rgba(21, 186, 196, 0.7) 100.3%);
 }
 </style>
