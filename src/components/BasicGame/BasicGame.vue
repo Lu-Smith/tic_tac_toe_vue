@@ -1,7 +1,11 @@
 <template>
   <h2>Basic game</h2>
   <h3 v-if="!gameOver">{{ player }}</h3>
-  <h3 v-else>{{ winner }} won!</h3>
+  <div v-else>
+    <h3>{{ winner }} won!</h3>
+    <br />
+    <button @click="playAgain">Play again</button>
+  </div>
   <BasicGrid :handlePlayer="handlePlayer" :move="move" :cells="cells"/>
   <h4 v-if="gameOver">Game Over</h4>
 </template>
@@ -23,6 +27,9 @@ export default {
     };
   },
   methods: {
+    playAgain() {
+      console.log('play again')
+    },
     handlePlayer(index) {
         if (!this.cells[index]) {
           if (this.player === 'Player 1') {
