@@ -1,7 +1,11 @@
 <template>
   <h2>Advanced game</h2>
   <h3 v-if="!gameOver">{{ player }}</h3>
-  <h3 v-else>{{ winner }} won!</h3>
+  <div v-else>
+    <h3>{{ winner }} won!</h3>
+    <br />
+    <button @click="playAgain" class="play-again">Play again</button>
+  </div>
   <AdvancedGrid :handlePlayer="handlePlayer" :move="move" :cells="cells"/>
   <h4 v-if="gameOver">Game Over</h4>
 </template>
@@ -23,6 +27,17 @@ export default {
     };
   },
   methods: {
+    playAgain() {
+      this.cells = ['','','','','','','','','','','','','','','','']
+      this.gameOver = false      
+      if (this.winner === 'Player 1') {
+            this.player = 'Player 2'
+            this.winner = ''
+      } else if (this.winner === 'Player 2') {
+            this.player = 'Player 1'
+            this.winner = ''
+          }
+    },
     handlePlayer(index) {
         if (!this.cells[index]) {
           if (this.player === 'Player 1') {
