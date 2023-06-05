@@ -1,6 +1,6 @@
 <template>
     <div class="current-date">
-      Today is {{ currentDate }}
+      Today is {{ currentDay }}th of {{ currentMonth}}, {{ currentYear }}
     </div>
   </template>
   
@@ -8,7 +8,10 @@
   export default {
     data() {
       return {
-        currentDate: null
+        currentDay: null,
+        currentMonth: null,
+        currentYear: null,
+        months: ['January', 'February', 'March', 'April', 'May','June', 'July', 'August', 'September', 'October', 'November', 'December'],
       };
     },
     mounted() {
@@ -16,7 +19,10 @@
     },
     methods: {
       getCurrentDate() {
-        this.currentDate = new Date().toLocaleDateString();
+        const currentDate = new Date();
+        this.currentDay = currentDate.getDate();
+        this.currentMonth = this.months[currentDate.getMonth()];
+        this.currentYear = currentDate.getFullYear();
       }
     }
   };
