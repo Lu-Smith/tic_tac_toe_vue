@@ -38,7 +38,7 @@ export default {
             this.winner = ''
           }
     },
-    handlePlayer(index) {
+    handlePlayer(index: number) {
         if (!this.cells[index]) {
           if (this.player === 'Player 1') {
             this.player = 'Player 2'
