@@ -18,10 +18,10 @@ button {
     color: white;
     border: 1px solid rgb(32, 38, 57);
     width: 100px;
+    margin: 20px 0;
 }
 
 h1, h3 {
-    margin: 30px 0;
     background: radial-gradient(circle at 10% 20%, rgb(32, 38, 57) 0%, rgb(63, 76, 119) 34.2%, rgb(21, 186, 196) 90.3%);
     -webkit-background-clip: text;
     color: transparent;
@@ -29,6 +29,10 @@ h1, h3 {
     width: 220px;
     font-weight: bold;
     letter-spacing: 1px;
+}
+
+h3 {
+    margin: 30px 0;
 }
 
 h4 {

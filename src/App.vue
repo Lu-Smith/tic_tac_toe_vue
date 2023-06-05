@@ -1,6 +1,6 @@
 <template>
+   <h1>Tic Tac Toe</h1>
   <MainHeader :handleSwitchGame="handleSwitchGame"/>
-  <h1>Tic Tac Toe</h1>
   <BasicGame v-if="gameLevel"/>
   <AdvancedGame v-if="!gameLevel" />
   <MainFooter />

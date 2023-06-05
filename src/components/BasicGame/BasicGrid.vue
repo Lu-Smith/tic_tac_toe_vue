@@ -4,6 +4,7 @@
     class="cell" 
     v-for="(cell, index) in cells" :key="index"  
     @click="handlePlayer(index)"
+    :class="{ 'rotate-animation': gameOver}"
     :style="{color: gameOver ? '#FF0000' : 'initial' }">
     {{ cell }}
     </div>
@@ -46,5 +47,18 @@
 
 .cell:hover {
   background: radial-gradient(circle at 10% 20%, rgba(253, 239, 132, 0.7) 0%, rgba(247, 198, 169, 0.7) 54.2%, rgba(21, 186, 196, 0.7) 100.3%);
+}
+
+.rotate-animation {
+  animation: rotate 1s ease-in-out;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
 }
 </style>
