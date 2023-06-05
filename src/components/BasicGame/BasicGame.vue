@@ -4,11 +4,11 @@
     <template v-if="!gameOver">
     <h3 >{{ player }}</h3>
   </template>
-    <template v-else>
+  <template v-else>
       <h3>{{ winner }}</h3>
       <br />
       <button @click="playAgain" class="play-again">Play again</button>
-    </template>
+  </template>
   </transition-group>
   <BasicGrid :handlePlayer="handlePlayer" :move="move" :cells="cells" :gameOver="gameOver"/>
   <h4 v-if="gameOver">Game Over</h4>
@@ -115,6 +115,13 @@ export default {
 
   .play-game {
     height: 160px;
+  }
+
+  @media screen and (max-width: 480px) {
+    .play-again {
+      width: 150px;
+      font-size: 16px;
+    }
   }
 
 </style>
