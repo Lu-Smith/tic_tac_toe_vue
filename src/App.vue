@@ -53,4 +53,12 @@ export default defineComponent({
   border-radius: 30px;
   height: 86vh;
 }
+
+@media screen and (max-width: 480px) {
+  #app {
+      padding: 15px;
+      border-radius: 15px;
+      height: 88vh;
+    }
+}
 </style>

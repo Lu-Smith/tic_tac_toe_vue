@@ -23,7 +23,6 @@ export default {
       text-align: center;
       padding: 20px;
       color: rgb(250, 250, 250);
-  
   }
   
   footer a {
@@ -54,4 +53,12 @@ export default {
     visibility: visible;
     transform: scaleX(1);
   }
+
+  @media screen and (max-width: 480px) {
+    footer {
+      padding: 10px;
+      font-size: 12px;
+    }
+  
+}
 </style>
