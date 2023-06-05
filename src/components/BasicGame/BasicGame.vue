@@ -1,6 +1,6 @@
 <template>
   <h2>{{ title }}</h2>
-  <transition-group name="playGame" tag="div">
+  <transition-group name="playGame" tag="div" class="play-game">
     <h3 v-if="!gameOver">{{ player }}</h3>
     <div v-else>
       <h3>{{ winner }}</h3>
@@ -97,20 +97,23 @@ export default {
 <style>
   .playGame-enter-active,
   .playGame-leave-active {
-    transition: all 0.5s;
+    transition: transform 0.5s;
   }
 
   .playGame-enter,  
   .playGame-leave-to {
-    opacity: 0;
-    transform: translateY(30px);
-
+    transform: scale(0);
+    transform-origin: center;
   }
 
   .play-again {
     width: 200px;
     background: rgb(173, 83, 137);
     font-size: 20px;
+  }
+
+  .play-game {
+    height: 160px;
   }
 
 </style>

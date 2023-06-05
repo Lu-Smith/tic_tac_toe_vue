@@ -1,6 +1,6 @@
 <template>
   <h2>{{ title }}</h2>
-  <transition-group name="playGame" tag="div">
+  <transition-group name="playGame" tag="div" class="play-game">
     <h3 v-if="!gameOver">{{ player }}</h3>
     <div v-else>
       <h3>{{ winner }}</h3>
@@ -98,7 +98,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>
