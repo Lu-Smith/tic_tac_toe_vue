@@ -28,7 +28,6 @@
   right: 30px;
   top: 20px;
   color: white;
-
 }
 
 </style>

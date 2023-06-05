@@ -45,5 +45,6 @@ export default defineComponent({
   color: rgb(32, 38, 57);
   padding: 30px;
   border-radius: 30px;
+  height: 85vh;
 }
 </style>
