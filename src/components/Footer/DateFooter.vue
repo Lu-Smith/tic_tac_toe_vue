@@ -1,6 +1,6 @@
 <template>
     <div class="current-date">
-      Today is {{ currentDay }}th of {{ currentMonth}}, {{ currentYear }}
+      Today is {{ currentDayOfWeek }}, {{ currentDay }}th of {{ currentMonth}}, {{ currentYear }}
     </div>
   </template>
   
@@ -8,6 +8,7 @@
   export default {
     data() {
       return {
+        currentDayOfWeek: null,
         currentDay: null,
         currentMonth: null,
         currentYear: null,
@@ -23,6 +24,7 @@
         this.currentDay = currentDate.getDate();
         this.currentMonth = this.months[currentDate.getMonth()];
         this.currentYear = currentDate.getFullYear();
+        this.currentDayOfWeek = currentDate.toLocaleString('en-US', { weekday: 'long' });
       }
     }
   };
@@ -35,5 +37,4 @@
   top: 20px;
   color: white;
 }
-
 </style>
