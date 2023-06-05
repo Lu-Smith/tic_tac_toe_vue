@@ -1,6 +1,10 @@
 <template>
   <div class="grid">
-    <div class="cell" v-for="(cell, index) in cells" :key="index"  @click="handlePlayer(index)">
+    <div 
+    class="cell" 
+    v-for="(cell, index) in cells" :key="index" 
+     @click="handlePlayer(index)"
+     :style="{color: gameOver ? 'white' : 'black', background: gameOver ? 'grey' : 'linear-gradient(109.5deg, rgb(13, 101, 136) 9.4%, rgb(86, 201, 255) 78.4%)' }">
     {{ cell }}
     </div>
   </div>
@@ -8,7 +12,7 @@
 
 <script lang="ts">
   export default {
-      props: ['handlePlayer', 'move', 'cells'],
+      props: ['handlePlayer', 'move', 'cells','gameOver'],
   }
 </script>
 
@@ -28,7 +32,6 @@
 .cell {
   width: 90px;
   height: 90px;
-  background: linear-gradient(109.5deg, rgb(13, 11, 136) 9.4%, rgb(86, 201, 255) 78.4%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,7 +41,6 @@
   font-size: 40px;
   cursor: pointer;
   transition: 200ms all ease-in-out;
-  color: #fdfbfb;
 }
 
 .cell:hover {

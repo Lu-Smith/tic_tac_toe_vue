@@ -6,7 +6,7 @@
     <br />
     <button @click="playAgain" class="play-again">Play again</button>
   </div>
-  <BasicGrid :handlePlayer="handlePlayer" :move="move" :cells="cells"/>
+  <BasicGrid :handlePlayer="handlePlayer" :move="move" :cells="cells" :gameOver="gameOver"/>
   <h4 v-if="gameOver">Game Over</h4>
 </template>
 
@@ -85,11 +85,10 @@ export default {
 </script>
 
 <style>
-.play-again {
-  width: 200px;
-  background: rgb(173, 83, 137);
-  font-size: 20px;
+  .play-again {
+    width: 200px;
+    background: rgb(173, 83, 137);
+    font-size: 20px;
 
-}
-
+  }
 </style>

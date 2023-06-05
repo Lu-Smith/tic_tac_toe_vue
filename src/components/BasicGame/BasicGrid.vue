@@ -1,6 +1,10 @@
 <template>
   <div class="grid">
-    <div class="cell" v-for="(cell, index) in cells" :key="index"  @click="handlePlayer(index)">
+    <div 
+    class="cell" 
+    v-for="(cell, index) in cells" :key="index"  
+    @click="handlePlayer(index)"
+    :style="{color: gameOver ? '#FF0000' : 'initial' }">
     {{ cell }}
     </div>
   </div>
@@ -8,7 +12,7 @@
 
 <script lang="ts">
   export default {
-      props: ['handlePlayer', 'move', 'cells'],
+      props: ['handlePlayer', 'move', 'cells', 'gameOver'],
   }
 </script>
 

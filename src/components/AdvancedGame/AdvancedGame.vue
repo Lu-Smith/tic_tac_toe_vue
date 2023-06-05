@@ -6,7 +6,7 @@
     <br />
     <button @click="playAgain" class="play-again">Play again</button>
   </div>
-  <AdvancedGrid :handlePlayer="handlePlayer" :move="move" :cells="cells"/>
+  <AdvancedGrid :handlePlayer="handlePlayer" :move="move" :cells="cells" :gameOver="gameOver"/>
   <h4 v-if="gameOver">Game Over</h4>
 </template>
 
