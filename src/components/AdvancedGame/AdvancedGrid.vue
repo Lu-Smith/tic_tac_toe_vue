@@ -48,4 +48,21 @@
   border: 5px dashed rgb(17, 83, 11);
   box-shadow: none;
 }
+
+@media screen and (max-width: 480px) {
+  .grid {
+    margin: 20px auto;
+    width: 310px;
+    height: 310px;
+  }
+
+  .cell {
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+    border: 2px solid rgb(243, 184, 96);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    font-size: 30px;
+  }
+}
 </style>
