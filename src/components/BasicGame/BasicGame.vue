@@ -28,14 +28,21 @@ export default {
   },
   methods: {
     playAgain() {
-      console.log('play again')
+      this.cells = ['','','','','','','','','']
+      this.gameOver = false      
+      if (this.winner === 'Player 1') {
+            this.player = 'Player 2'
+            this.winner = ''
+      } else if (this.winner === 'Player 2') {
+            this.player = 'Player 1'
+            this.winner = ''
+          }
     },
     handlePlayer(index) {
         if (!this.cells[index]) {
           if (this.player === 'Player 1') {
             this.player = 'Player 2'
             this.move = 'O'
-          
           } else if (this.player === 'Player 2') {
             this.player = 'Player 1'
             this.move = 'X'
