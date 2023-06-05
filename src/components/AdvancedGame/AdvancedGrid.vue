@@ -28,19 +28,20 @@
 .cell {
   width: 90px;
   height: 90px;
-  background: radial-gradient(circle at 10% 20%, rgb(253, 239, 132) 0%, rgb(247, 198, 169) 54.2%, rgb(21, 186, 196) 100.3%);
+  background: linear-gradient(109.5deg, rgb(13, 11, 136) 9.4%, rgb(86, 201, 255) 78.4%);
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  border: 3px solid rgb(243, 184, 96);
+  border: 3px solid #8bbda1;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
   font-size: 40px;
   cursor: pointer;
   transition: 200ms all ease-in-out;
+  color: #fdfbfb;
 }
 
 .cell:hover {
-  background: radial-gradient(circle at 10% 20%, rgba(253, 239, 132, 0.7) 0%, rgba(247, 198, 169, 0.7) 54.2%, rgba(21, 186, 196, 0.7) 100.3%);
+  background: linear-gradient(109.5deg, rgba(13, 11, 136, 0.6) 9.4%, rgba(86, 255, 248, 0.6) 78.4%);
 }
 </style>
