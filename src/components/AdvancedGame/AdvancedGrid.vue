@@ -44,6 +44,7 @@
 }
 
 .cell:hover {
-  background: linear-gradient(109.5deg, rgba(13, 11, 136, 0.6) 9.4%, rgba(86, 255, 248, 0.6) 78.4%);
+  border: 5px dashed rgb(17, 83, 11);
+  box-shadow: none;
 }
 </style>
