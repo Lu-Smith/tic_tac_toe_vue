@@ -9,12 +9,3 @@ export default {
     props: ['handleSwitchGame', 'level']
 }
 </script>
-
-<style>
-header {
-    display: flex;
-    gap: 30px;
-    align-items: center;
-    justify-content: center;
-}
-</style>

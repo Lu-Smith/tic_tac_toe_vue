@@ -1,6 +1,6 @@
 <template>
     <div class="current-date">
-      Today is {{ currentDayOfWeek }}, {{ currentDay }}th of {{ currentMonth}}, {{ currentYear }}
+      Today is <span>{{ currentDayOfWeek }}</span>, {{ currentDay }}th of {{ currentMonth}}, {{ currentYear }}
     </div>
   </template>
   
@@ -36,5 +36,21 @@
   right: 30px;
   top: 20px;
   color: white;
+  font-size: 16px;
+  line-height: 20px;
+  font-style: italic;
+}
+
+.current-date span {
+  color: rgb(236, 171, 193);
+  font-weight: bold;
+}
+
+@media screen and (max-width: 480px) {
+  .current-date {
+    font-size: 12px;
+    right: 20px;
+    top: 13px;
+  }
 }
 </style>
