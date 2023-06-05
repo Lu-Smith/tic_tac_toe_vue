@@ -1,6 +1,6 @@
 <template>
    <h1>Tic Tac Toe</h1>
-  <MainHeader :handleSwitchGame="handleSwitchGame"/>
+  <MainHeader :handleSwitchGame="handleSwitchGame" :level="level"/>
   <BasicGame v-if="gameLevel"/>
   <AdvancedGame v-if="!gameLevel" />
   <MainFooter />
@@ -23,12 +23,18 @@ export default defineComponent({
   },
   data() {
     return {
-      gameLevel: true
+      gameLevel: true,
+      level: 'Advanced'
     }
   },
   methods: {
     handleSwitchGame() {
       this.gameLevel = !this.gameLevel
+      if (this.gameLevel === false) {
+        this.level = 'Basic'
+      } else {
+        this.level = 'Advanced'
+      }
     }
   }
 });

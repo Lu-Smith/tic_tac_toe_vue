@@ -1,13 +1,12 @@
 <template>
     <header>
-        <button @click="handleSwitchGame">basic</button>
-        <button @click="handleSwitchGame">advanced</button>
+        <button @click="handleSwitchGame">{{ level }}</button>
     </header>
 </template>
 
 <script lang="ts">
 export default {
-    props: ['handleSwitchGame']
+    props: ['handleSwitchGame', 'level']
 }
 </script>
 

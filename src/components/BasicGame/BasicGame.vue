@@ -100,10 +100,11 @@ export default {
     transition: all 0.5s;
   }
 
-  .playGame-enter,
+  .playGame-enter,  
   .playGame-leave-to {
     opacity: 0;
     transform: translateY(30px);
+
   }
 
   .play-again {
@@ -111,4 +112,5 @@ export default {
     background: rgb(173, 83, 137);
     font-size: 20px;
   }
+
 </style>
