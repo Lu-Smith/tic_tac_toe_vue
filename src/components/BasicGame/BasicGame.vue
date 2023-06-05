@@ -1,12 +1,14 @@
 <template>
   <h2>{{ title }}</h2>
   <transition-group name="playGame" tag="div" class="play-game">
-    <h3 v-if="!gameOver">{{ player }}</h3>
-    <div v-else>
+    <template v-if="!gameOver">
+    <h3 >{{ player }}</h3>
+  </template>
+    <template v-else>
       <h3>{{ winner }}</h3>
       <br />
       <button @click="playAgain" class="play-again">Play again</button>
-    </div>
+    </template>
   </transition-group>
   <BasicGrid :handlePlayer="handlePlayer" :move="move" :cells="cells" :gameOver="gameOver"/>
   <h4 v-if="gameOver">Game Over</h4>
@@ -103,7 +105,6 @@ export default {
   .playGame-enter,  
   .playGame-leave-to {
     transform: scale(0);
-    transform-origin: center;
   }
 
   .play-again {

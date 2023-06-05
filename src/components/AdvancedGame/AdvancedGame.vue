@@ -1,12 +1,14 @@
 <template>
   <h2>{{ title }}</h2>
   <transition-group name="playGame" tag="div" class="play-game">
-    <h3 v-if="!gameOver">{{ player }}</h3>
-    <div v-else>
+    <template v-if="!gameOver">
+    <h3>{{ player }}</h3>
+    </template>
+    <template v-else>
       <h3>{{ winner }}</h3>
       <br />
       <button @click="playAgain" class="play-again">Play again</button>
-    </div>
+    </template>
   </transition-group>
   <AdvancedGrid :handlePlayer="handlePlayer" :move="move" :cells="cells" :gameOver="gameOver"/>
   <h4 v-if="gameOver">Game Over</h4>
@@ -34,10 +36,10 @@ export default {
       this.cells = ['','','','','','','','','','','','','','','','']
       this.gameOver = false
       this.title = 'Start Playing'         
-      if (this.winner === 'Player 1') {
+      if (this.winner === 'Player 1 won!') {
             this.player = 'Player 2'
             this.winner = ''
-      } else if (this.winner === 'Player 2') {
+      } else if (this.winner === 'Player 2 won!') {
             this.player = 'Player 1'
             this.winner = ''
       } else if (this.winner === 'Draw') {
@@ -69,7 +71,7 @@ export default {
               this.cells[3] === 'O' && this.cells[6] === 'O' && this.cells[9] === 'O' && this.cells[12] === 'O' 
           ) {
             this.gameOver = true
-            this.winner = 'Player 1'
+            this.winner = 'Player 1 won!'
             this.move = ''
             this.player = ''
           } else if (this.cells[0] === 'X' && this.cells[1] === 'X' && this.cells[2] === 'X' && this.cells[3] === 'X'|| 
@@ -84,7 +86,7 @@ export default {
               this.cells[3] === 'X' && this.cells[6] === 'X' && this.cells[9] === 'X' && this.cells[12] === 'X' 
           ) {
             this.gameOver = true
-            this.winner = 'Player 2'
+            this.winner = 'Player 2 won!'
             this.move = ''
             this.player = ''
         } else if (this.cells.every(cell => cell !== '')) {
