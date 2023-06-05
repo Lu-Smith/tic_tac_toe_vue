@@ -10,7 +10,7 @@
   <h4 v-if="gameOver">Game Over</h4>
 </template>
 
-<script>
+<script lang="ts">
 import BasicGrid from './BasicGrid.vue'
 
 export default {

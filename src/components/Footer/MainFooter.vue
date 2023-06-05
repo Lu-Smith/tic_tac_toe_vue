@@ -4,7 +4,7 @@
     <a href="https://github.com/Lu-Smith/tic_tac_toe_vue" target="_blank">GitHub</a>.</footer>
 </template>
 
-<script>
+<script lang="ts">
 import DateFooter from './DateFooter.vue';
 
 export default {
@@ -14,9 +14,7 @@ export default {
 }
 </script>
 
-
-  
-  <style>
+<style>
   footer {
       position: fixed;
       bottom: 0;
@@ -56,4 +54,4 @@ export default {
     visibility: visible;
     transform: scaleX(1);
   }
-  </style>
+</style>

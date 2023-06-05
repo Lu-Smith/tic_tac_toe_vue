@@ -10,7 +10,7 @@
   <h4 v-if="gameOver">Game Over</h4>
 </template>
 
-<script>
+<script lang="ts">
 import AdvancedGrid from './AdvancedGrid.vue'
 
 export default {

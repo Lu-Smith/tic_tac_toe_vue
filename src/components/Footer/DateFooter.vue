@@ -4,14 +4,14 @@
     </div>
   </template>
   
-<script>
+<script lang="ts">
   export default {
     data() {
       return {
-        currentDayOfWeek: null,
-        currentDay: null,
-        currentMonth: null,
-        currentYear: null,
+        currentDayOfWeek: null as null | string,
+        currentDay: null as null | number,
+        currentMonth: null as null | string,
+        currentYear: null as null | number,
         months: ['January', 'February', 'March', 'April', 'May','June', 'July', 'August', 'September', 'October', 'November', 'December'],
       };
     },
