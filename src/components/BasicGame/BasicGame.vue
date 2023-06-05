@@ -4,7 +4,7 @@
   <div v-else>
     <h3>{{ winner }} won!</h3>
     <br />
-    <button @click="playAgain">Play again</button>
+    <button @click="playAgain" class="play-again">Play again</button>
   </div>
   <BasicGrid :handlePlayer="handlePlayer" :move="move" :cells="cells"/>
   <h4 v-if="gameOver">Game Over</h4>
@@ -75,5 +75,11 @@ export default {
 </script>
 
 <style>
+.play-again {
+  width: 200px;
+  background: rgb(173, 83, 137);
+  font-size: 20px;
+
+}
 
 </style>
