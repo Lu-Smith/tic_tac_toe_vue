@@ -1,13 +1,13 @@
 <template>
-  <div class="grid">
+  <transition-group class="grid" name="grid" tag="div">
     <div 
-    class="cell" 
-    v-for="(cell, index) in cells" :key="index" 
-     @click="handlePlayer(index)"
-     :style="{color: gameOver ? 'white' : 'black', background: gameOver ? 'grey' : 'linear-gradient(109.5deg, rgb(13, 101, 136) 9.4%, rgb(86, 201, 255) 78.4%)' }">
+      class="cell" 
+      v-for="(cell, index) in cells" :key="index" 
+      @click="handlePlayer(index)"
+      :style="{color: gameOver ? 'white' : 'black', background: gameOver ? 'grey' : 'linear-gradient(109.5deg, rgb(13, 101, 136) 9.4%, rgb(86, 201, 255) 78.4%)' }">
     {{ cell }}
     </div>
-  </div>
+  </transition-group>
 </template>
 
 <script lang="ts">

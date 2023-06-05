@@ -1,11 +1,13 @@
 <template>
   <h2>{{ title }}</h2>
-  <h3 v-if="!gameOver">{{ player }}</h3>
-  <div v-else>
-    <h3>{{ winner }}</h3>
-    <br />
-    <button @click="playAgain" class="play-again">Play again</button>
-  </div>
+  <transition-group name="playGame" tag="div">
+    <h3 v-if="!gameOver">{{ player }}</h3>
+    <div v-else>
+      <h3>{{ winner }}</h3>
+      <br />
+      <button @click="playAgain" class="play-again">Play again</button>
+    </div>
+  </transition-group>
   <AdvancedGrid :handlePlayer="handlePlayer" :move="move" :cells="cells" :gameOver="gameOver"/>
   <h4 v-if="gameOver">Game Over</h4>
 </template>
