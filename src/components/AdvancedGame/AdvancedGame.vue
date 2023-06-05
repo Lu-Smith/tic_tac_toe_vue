@@ -1,5 +1,5 @@
 <template>
-  <h2>Advanced game</h2>
+  <h2>{{ title }}</h2>
   <h3 v-if="!gameOver">{{ player }}</h3>
   <div v-else>
     <h3>{{ winner }} won!</h3>
@@ -19,6 +19,7 @@ export default {
   },
   data() {
     return {
+      title: 'Start Playing',
       player: 'Player 1',
       move: '',
       cells: ['','','','','','','','','','','','','','','',''],
@@ -29,7 +30,8 @@ export default {
   methods: {
     playAgain() {
       this.cells = ['','','','','','','','','','','','','','','','']
-      this.gameOver = false      
+      this.gameOver = false
+      this.title = 'Start Playing'         
       if (this.winner === 'Player 1') {
             this.player = 'Player 2'
             this.winner = ''
@@ -39,6 +41,7 @@ export default {
           }
     },
     handlePlayer(index: number) {
+      this.title = 'Advanced Game' 
         if (!this.cells[index]) {
           if (this.player === 'Player 1') {
             this.player = 'Player 2'
