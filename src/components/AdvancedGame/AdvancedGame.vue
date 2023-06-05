@@ -2,7 +2,7 @@
   <h2>{{ title }}</h2>
   <h3 v-if="!gameOver">{{ player }}</h3>
   <div v-else>
-    <h3>{{ winner }} won!</h3>
+    <h3>{{ winner }}</h3>
     <br />
     <button @click="playAgain" class="play-again">Play again</button>
   </div>
@@ -38,7 +38,10 @@ export default {
       } else if (this.winner === 'Player 2') {
             this.player = 'Player 1'
             this.winner = ''
-          }
+      } else if (this.winner === 'Draw') {
+            this.player = 'Player 1'
+            this.winner = ''
+      }
     },
     handlePlayer(index: number) {
       this.title = 'Advanced Game' 
@@ -50,7 +53,7 @@ export default {
           } else if (this.player === 'Player 2') {
             this.player = 'Player 1'
             this.move = 'X'
-          }
+          } 
           this.cells[index] = this.move; 
           if (this.cells[0] === 'O' && this.cells[1] === 'O' && this.cells[2] === 'O' && this.cells[3] === 'O'|| 
               this.cells[4] === 'O' && this.cells[5] === 'O' && this.cells[6] === 'O' && this.cells[7] === 'O'||
@@ -82,7 +85,12 @@ export default {
             this.winner = 'Player 2'
             this.move = ''
             this.player = ''
-        } 
+        } else if (this.cells.every(cell => cell !== '')) {
+            this.gameOver = true
+            this.winner = 'Draw'
+            this.move = ''
+            this.player = ''
+        }
       }
     }
   }
