@@ -3,7 +3,6 @@
   <h1>Tic Tac Toe</h1>
   <BasicGame v-if="gameLevel"/>
   <AdvancedGame v-if="!gameLevel" />
-  <DateFooter />
   <MainFooter />
 </template>
 
@@ -11,8 +10,7 @@
 import { defineComponent } from 'vue';
 import AdvancedGame from './components/AdvancedGame/AdvancedGame.vue';
 import BasicGame from './components/BasicGame/BasicGame.vue';
-import DateFooter from './components/DateFooter.vue';
-import MainFooter from './components/MainFooter.vue';
+import MainFooter from './components/Footer/MainFooter.vue';
 import MainHeader from './components/MainHeader.vue';
 
 export default defineComponent({
@@ -22,7 +20,6 @@ export default defineComponent({
     MainHeader,
     BasicGame,
     AdvancedGame,
-    DateFooter,
   },
   data() {
     return {

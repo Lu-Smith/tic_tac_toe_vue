@@ -1,10 +1,10 @@
 <template>
-    <div>
-      Current Date: {{ currentDate }}
+    <div class="current-date">
+      Today is {{ currentDate }}
     </div>
   </template>
   
-  <script>
+<script>
   export default {
     data() {
       return {
@@ -20,4 +20,15 @@
       }
     }
   };
-  </script>
+</script>
+
+<style>
+.current-date {
+  position: fixed;
+  right: 30px;
+  top: 20px;
+  color: white;
+
+}
+
+</style>
