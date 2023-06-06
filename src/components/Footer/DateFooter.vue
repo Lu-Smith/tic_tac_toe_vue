@@ -1,6 +1,6 @@
 <template>
     <div class="current-date">
-      Today is <span>{{ currentDayOfWeek }}</span>, {{ currentDay }}th of {{ currentMonth}}, {{ currentYear }}
+      Today is <span>{{ currentDayOfWeek }}</span>, {{ date }}
     </div>
   </template>
   
@@ -13,6 +13,7 @@
         currentMonth: null as null | string,
         currentYear: null as null | number,
         months: ['January', 'February', 'March', 'April', 'May','June', 'July', 'August', 'September', 'October', 'November', 'December'],
+        date: '' as string
       };
     },
     mounted() {
@@ -25,6 +26,16 @@
         this.currentMonth = this.months[currentDate.getMonth()];
         this.currentYear = currentDate.getFullYear();
         this.currentDayOfWeek = currentDate.toLocaleString('en-US', { weekday: 'long' });
+        if (this.currentDay === 1 || this.currentDay === 31) {
+          this.date = `${this.currentDay}st of ${this.currentMonth}, ${this.currentYear}`;
+        } else  if (this.currentDay === 2) {
+          this.date = `${this.currentDay}nd of ${this.currentMonth}, ${this.currentYear}`;
+        } else  if (this.currentDay === 3) {
+          this.date = `${this.currentDay}rd of ${this.currentMonth}, ${this.currentYear}`;
+        } else {
+          this.date = `${this.currentDay}th of ${this.currentMonth}, ${this.currentYear}`;
+        }
+        
       }
     }
   };
